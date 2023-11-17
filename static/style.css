@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #393E46;
+    padding: 3px 30px;
+    width: auto;
+    height: 20vh;
+}
+
+.logo {
+    width: auto;
+    height: 100%;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.navbar {
+    height: 10vh;
+    background-color: #068587;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 100%;
+    height: 10vh;
+}
+
+.navbar ul li {
+    margin: auto;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar ul li:hover {
+    background-color: rgb(106, 106, 106);
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    font-size: larger;
+    color: #ffffff;
+}
+
+.kapsayici {
+    display: flex;
+    flex-direction: column;
+}
+
+.kokteyl {
+    position: relative;
+    flex: 1;
+}
+
+.kokteyl img {
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 1s;
+}
+
+.kokteyl:hover .overlay {
+    background-color: rgba(157, 157, 157, 0.5);
+}
+
+.overlay a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 35px;
+    text-shadow: 5px 5px 10px #583434;
+    font-family: 'Titan One', sans-serif;
+}
+
+footer {
+    padding: 5px;
+    text-align: center;
+    background-color: #068587;
+}
+
+.socialMediaList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+.icon {
+    margin: 5px;
+}
+
+.socialMediaList li {
+    font-size: 1.5 rem;
+}
+
+.socialMediaList li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+/* KAYNAK MEHMET HOCA */
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: rgb(66, 66, 66);
+}
+::-webkit-scrollbar-thumb{
+    background-color: black;
+    border: 3px solid rgb(66, 66, 66);
+}
+/* KAYNAK MEHMET HOCA */
+
+@media (min-width: 320px) {
+
+    header {
+        padding: 3px 10px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    header {
+        padding: 3px 30px;
+    }
+    .kapsayici {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 767px) {
+    .icon {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .icon a {
+        width: 50%;
+        height: 50%;
+    }
+}
